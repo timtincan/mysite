@@ -4,7 +4,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://aidenybai.com',
+  site: 'https://timet.com',
   sitemap: true,
   integrations: [solid(), mdx()],
   markdown: {

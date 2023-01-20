@@ -11,7 +11,7 @@ const { content } = Astro.props;
       name="description"
       content={content.description || 'Student from Washington State passionate about HCI research and open source.'}
     />
-    <meta name="author" content="Aiden Bai" />
+    <meta name="author" content="Timothy Tso" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@ const { content } = Astro.props;
     <div class="container">
       <h2 class="header">
         <a href="/" class="headshot">
-          <img alt="image" class="headshot" src="/img/favicon.png" loading="lazy" decoding="async" />
+          <img alt="image" class="headshot" src="/img/favicon.jpg" loading="lazy" decoding="async" />
         </a>
         {content.title}
       </h2>
@@ -36,17 +36,6 @@ const { content } = Astro.props;
       <article>
         <p><slot /></p>
       </article>
-
-      <p class="footer">
-        <span>
-          <abbr
-            title="This site and all its content are licensed under a MIT License."
-            >made w/ ♥</abbr
-          >
-          by <a class="email" href="mailto:aiden.bai05@gmail.com">Aiden Bai.</a>
-        </span>
-        <span class="home"><a href="/">← go home</a></span>
-      </p>
     </div>
 
     <script>
