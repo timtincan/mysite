@@ -1,0 +1,211 @@
+:root {
+  --background: #010204;
+  --highlight: #282a36;
+  --main: #8a8f98;
+  --semibold: #b0b2b6;
+  --bold: #cdced1;
+  --underline: #494d64;
+  --million-progress-bar-color: #5e6ad2;
+  --sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --mono: 'Roboto Mono', ui-monospace, SFMono-Regular, SF Mono,
+    Menlo, Consolas, Liberation Mono, monospace;
+}
+
+::selection {
+  background: var(--highlight);
+  color: #fff;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  font-weight: 400;
+  display: flex;
+  padding: 0.75rem;
+  background: var(--background);
+  color: var(--main);
+}
+
+.blur {
+  filter: blur(0.2rem);
+}
+
+.glow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.1;
+  pointer-events: none;
+  background-image: conic-gradient(
+    from 230.29deg at 51.63%52.16%,
+    #2400ff 0deg,
+    #0087ff 67.5deg,
+    #ff1d7a 198.75deg,
+    #f5381b 251.25deg,
+    #ff5335 301.88deg,
+    #691eff 360deg
+  );
+  filter: blur(15rem);
+  z-index: -1;
+}
+
+p,
+li,
+summary {
+  font-size: 1.15rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.8rem;
+}
+
+code {
+  font-size: 1.1rem;
+  font-family: var(--mono);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--bold);
+}
+
+strong,
+a {
+  font-weight: 500;
+  color: var(--semibold);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2,
+h3 {
+  font-family: 'EB Garamond', serif;
+}
+
+h2 {
+  font-size: 2.7rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h3 > a {
+  font-weight: 600 !important;
+  color: #fff !important;
+}
+
+a {
+  text-underline-position: from-font;
+  text-decoration-skip-ink: all;
+  text-decoration-color: var(--underline);
+  text-underline-offset: -1px;
+  text-decoration-line: underline;
+  text-decoration-thickness: from-font;
+  transition: all 0.1s ease;
+  text-decoration-style: solid;
+}
+
+a:hover {
+  background: var(--highlight);
+  border-radius: 0.3rem;
+}
+
+ol {
+  counter-reset: item;
+}
+
+ol li {
+  display: block;
+}
+
+ol li:before {
+  content: counter(item) '. ';
+  counter-increment: item;
+}
+
+blockquote {
+  margin: 20px 0 30px;
+  padding-left: 20px;
+  border-left: 5px solid var(--highlight);
+}
+
+.header {
+  align-items: center;
+  display: flex;
+}
+
+.headshot {
+  width: 3rem;
+  height: 3rem;
+  flex-direction: row;
+  margin: 0 0.5rem 0 0;
+  border-radius: 100%;
+  animation: spin 4s ease-in-out infinite;
+}
+
+.headshot:hover {
+  animation-play-state: paused;
+}
+
+.container {
+  max-width: 45rem;
+  width: 45rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.boba {
+  width: 100%;
+  border-radius: 0.3rem;
+}
+
+.footer {
+  margin-top: 3.5rem;
+  font-size: 0.9rem;
+  padding-left: auto;
+  display: flex;
+}
+
+.home {
+  margin-left: auto;
+}
+
+.fade {
+  opacity: 0.5;
+}
+
+.astro-code {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
